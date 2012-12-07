@@ -1,5 +1,5 @@
-Lambda calculus booleans implemented in PHP
-============================================
+Lambda calculus boolean functions implemented in PHP
+====================================================
 
 PHP library implementing lambda calculus boolean functions.
 
