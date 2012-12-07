@@ -52,13 +52,13 @@ The lambda calculus works differently. It adamantly insists on the idea that `TR
 	}
 
 
-For example, the answer to the question `_TRUE_('john', 'peter')` is 'john'. Now you are probably thinking "You cannot mean this. This is absurd!" I must insist, however, that the answer to the truth of the question about `John` and `Peter` is `John`, simply because you mentioned `John` first. If you supply two alternatives in your question, the first alternative is always the true answer and the second alternative the false one. So, indeed, you decide entirely by yourself what it the truth. Just mention what you prefer, first.
+For example, the answer to the question `_TRUE_('john', 'peter')` is `john`. Now you are probably thinking "You cannot mean this. This is absurd!" I must insist, however, that the answer to the truth of the question about `John` and `Peter` is `John`, simply because you mentioned `John` first. If you supply two alternatives in your question, the first alternative is always the true answer and the second alternative the false one. So, indeed, you decide entirely by yourself what it the truth. Just mention what you prefer, first.
 
-You may think that the idea of determining truth and falsehood arbitrarily by essentially leaving the answer to the person asking the question is a problem. It is absolutely not. On the contrary, this is the only correct way to address the problem.
+You may think that the idea of determining truth and falsehood arbitrarily by essentially leaving the answer to the person asking the question is a problem. It is absolutely not. On the contrary, this is the only correct way to determine the truth.
 
 The definitions for `TRUE` and `FALSE` in the lambda calculus satisfy two very important constraints:
 
-        For if the judgement is analytical, be it affirmative or negative, its truth must always
+	For if the judgement is analytical, be it affirmative or negative, its truth must always
 	be recognizable by means of the principle of contradiction. [...] We must therefore hold
 	the principle of contradiction to be the universal and fully sufficient Principle of all
 	analytical cognition.
@@ -85,13 +85,13 @@ So, the only acceptable answer to the question "Is New York a city in the USA?" 
 	function ($a,$b) { return $a;}
 
 
-And to the question "Is New York a city in China" like this:
+The only acceptable answer to the question "Is New York a city in China" looks like this:
 
 
 	function ($a,$b) { return $b;}
 
 
-This are really the answers. The Lambda calculus even refrains from naming these functions `_TRUE_` and `_FALSE_` because these names could confuse you as to what the real answers are. The real answers are given above.
+This are the real answers. The Lambda calculus even refrains from naming these functions `_TRUE_` and `_FALSE_` because these names could confuse you as to what the real answers are. The real answers are the functions given above.
 
 Let's repeat the question and the answer to make sure the point came across correctly. The answer to the question "Is New York a city in the USA?" is not:
 
@@ -104,30 +104,31 @@ It is:
 	function ($a,$b) { return $a;}
 
 
-We can indeed refer to the function implementation with a name, but the symbol is definitely its real nature. It is just a symbol:
+We can indeed refer to the function implementation with a name, but the symbol is definitely its real nature. It is just a potentially confusing symbol:
 
 
 	_TRUE_
 
 
 
-4. AND, OR, NOT
----------------
+4. AND, OR, and NOT
+-------------------
 
-People who see a problem in accepting any non-contradictory statement as the truth, may think that any set of statements will end up true. This is not the case at all.
+People who see a problem in accepting any non-contradictory statement as the truth, may think that any arbitrary set of statements will end up to be true. This is not the case at all.
 
 
 ###4.1. AND
 
-The combination `statement1 AND statement2` will have the following answers:
+The answer to the truth of a combination of statements, `statement1 AND statement2` is:
 
 	statement1      statement2      statement1 and statement2
+
 	_FALSE_         _FALSE_         _FALSE_
 	_FALSE_         _TRUE_          _FALSE_
 	_TRUE_         _FALSE_          _FALSE_
 	_TRUE_         _TRUE_           _TRUE_
 
-As soon as you have chosen `_TRUE_` or `_FALSE_` as the answers to a statement1 and to another statement2, be careful what you start saying about `statement1 _AND_ statement2`. You are no longer free to make arbitrary claims about the combined statement. The lambda calculus is perfectly capable of verifying your combined statement with the following function:
+As soon as you have chosen `_TRUE_` or `_FALSE_` as the answers to a `statement1` and to another `statement2`, be careful what you start saying about `statement1 _AND_ statement2`. You are no longer free to make arbitrary claims about the combined statement. The lambda calculus is perfectly capable of verifying your combined statement with the following function:
 
 	/** implementation for: _AND_ := λp.λq.p q p */
 
@@ -144,13 +145,14 @@ As soon as you have chosen `_TRUE_` or `_FALSE_` as the answers to a statement1 
 	output(_AND_('_FALSE_','_FALSE_'));     //FALSE
 
 
-`$a` is the function you have chosen for the first statement. It must be `_TRUE_` or `_FALSE_`. Next, `$b` is the function you have chosen for the second statement. It must be `_TRUE_` or `_FALSE_`.
+`$a` is the `_TRUE_` or `_FALSE_` function that you have chosen as an answer to the first statement. Next, `$b` is the function you have chosen as answer to the second statement. From there, you are no longer free to choose an answer to the statement `statement1 AND statement2`. It is the system that will tell you the answer.
 
 
 The combination `statement1 OR statement2` will have the following answers:
 
 
 	statement1      statement2      statement1 and statement2
+
 	_FALSE_         _FALSE_         _FALSE_
 	_FALSE_         _TRUE_          _TRUE_
 	_TRUE_         _FALSE_          _TRUE_
@@ -186,9 +188,8 @@ And now comes the most dangerous function, the `_NOT_` function:
 
 		NOT := λp.λa.λb.p b a
 
-	This implementation takes 3 parameters.
-	This is unsuitable.
-	The implementation should only take 1 parameter.
+	The traditional implementation takes 3 parameters, which is not really suitable.
+	The following implementation only takes 1 parameter.
 
 	*/
 
@@ -200,14 +201,17 @@ And now comes the most dangerous function, the `_NOT_` function:
 		return $a('_FALSE_','_TRUE_');       
 	};
 
-		                                //Expected output
+						//Expected output
 
-	output(_NOT_('_TRUE_'));                //FALSE
-	output(_NOT_('_FALSE_'));               //TRUE
+	output(_NOT_('_TRUE_'));		//FALSE
+	output(_NOT_('_FALSE_'));		//TRUE
 
 
 
-The `_NOT_` function is the basis for all cognition. An explanation will collapse as soon as we claim the truth of `$a` while the function `_NOT_($a)` also returns the `_TRUE_` function. This is the dreaded notion of `contradiction`. The notion of `contradiction` is the ONLY but also the absolutely sufficient basis for rejecting a set of statements. Every logical combination of statements must never yield such contradiction.
+The `_NOT_` function is the basis for all cognition.
+
+
+A set of statements `$a` will collapse as soon as we claim the truth of `$a` while the function `_NOT_($a)` also returns the `_TRUE_` function. This is the dreaded notion of `contradiction`. The notion of `contradiction` is the ONLY but also the absolutely sufficient basis for rejecting a set of statements. Every logical combination of statements must never yield such contradiction.
 
 
 Some people do not realize how hard it is to keep making statements -- about the gremlins that ate their sandwich -- before hitting a dreaded contradiction. This is why even skillfull liars will avoid lying, if it causes them no damage to tell the truth:
@@ -220,7 +224,8 @@ Some people do not realize how hard it is to keep making statements -- about the
 If a theory, that is, a set of statements, does not collapse in a spectacular contradiction, it is simply not false:
 
 
-        “You can recognize a small truth because its opposite is a falsehood. The opposite of a great truth is another truth.” 
+        “You can recognize a small truth because its opposite is a falsehood.
+	The opposite of a great truth is another truth.” 
         ― Niels Bohr
 
 
