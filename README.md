@@ -111,7 +111,7 @@ We can indeed refer to the function implementation with a name, but the symbol i
 
 
 
-4. AND, OR, and NOT
+3. AND, OR, and NOT
 -------------------
 
 People who see a problem in accepting any non-contradictory statement as the truth, may think that any arbitrary set of statements will end up to be true. This is not the case at all.
@@ -249,13 +249,13 @@ If the answer to `$x` is `function ($a,$b) { return $a;}`, the answer to `_NOT_(
 Ambiguities may look like contradictions, but they are not. Bohr's remark simply rephrases an inevitable consequence of the Church-Turing thesis concerning the [Entscheidungsproblem](http://en.wikipedia.org/wiki/Entscheidungsproblem). 
 
 
-5. Conclusion
+4. Conclusion
 -------------
 
 The definitions for `TRUE` and `FALSE` are definitely much more solidly defined in the lambda calculus than in implementations in which these concept are mapped to arbitrary constants along with a few arbitrary rules to deal with the fallout of such choice.
 
 
-6. License
+5. License
 ----------
 	Copyright (c) 2012 Erik Poupaert.
 	Licensed under the Library General Public License (LGPL).
