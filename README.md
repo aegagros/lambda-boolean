@@ -26,8 +26,6 @@ Invoke the function tests with:
 
 Other values are ordinarily considered `TRUE` or `FALSE` depending on the one or the other arbitrary calculation rule. For example, "Zero is true and everything else is false" (Shell style), or "Zero is false and everything else is true." (C style). As you can see, it is absolutely not a problem to define `TRUE` and `FALSE` in diametrically opposed ways.
 
-Therefore, `TRUE` and `FALSE` are typically defined as arbitrarily different values.
-
 The lambda calculus works differently. It adamantly insists on the idea that `TRUE` and `FALSE` are arbitrarily different functions.
 
 
@@ -52,7 +50,7 @@ The lambda calculus works differently. It adamantly insists on the idea that `TR
 	}
 
 
-For example, the answer to the question `_TRUE_('john', 'peter')` is `john`. Now you are probably thinking "You cannot mean this. This is absurd!" I must insist, however, that the answer to the truth of the question about `John` and `Peter` is `John`, simply because you mentioned `John` first. If you supply two alternatives in your question, the first alternative is always the true answer and the second alternative the false one. So, indeed, you decide entirely by yourself what it the truth. Just mention what you prefer, first.
+For example, the answer to the question `_TRUE_('john', 'peter')` is `john`. Now you are probably thinking "You cannot mean this. This is absurd!" I must insist, however, that the answer to the truth of the question about `John` and `Peter` is `John`, simply because you mentioned `John` first. If you supply two alternatives in your question, the first alternative is always the true answer and the second alternative the false one. So, indeed, you decide entirely by yourself what is the truth. Just mention what you prefer, first.
 
 You may think that the idea of determining truth and falsehood arbitrarily by essentially leaving the answer to the person asking the question is a problem. It is absolutely not. On the contrary, this is the only correct way to determine the truth.
 
@@ -91,7 +89,7 @@ The only acceptable answer to the question "Is New York a city in China" looks l
 	function ($a,$b) { return $b;}
 
 
-This are the real answers. The Lambda calculus even refrains from naming these functions `_TRUE_` and `_FALSE_` because these names could confuse you as to what the real answers are. The real answers are the functions given above.
+These are the real answers. The Lambda calculus even refrains from naming these functions `_TRUE_` and `_FALSE_` because these names could confuse you as to what the real answers are. The real answers are the functions given above.
 
 Let's repeat the question and the answer to make sure the point came across correctly. The answer to the question "Is New York a city in the USA?" is not:
 
@@ -139,7 +137,7 @@ As soon as you have chosen `_TRUE_` or `_FALSE_` as the answers to a `statement1
 	output(_AND_('_FALSE_','_FALSE_'));     //FALSE
 
 
-`$a` is the `_TRUE_` or `_FALSE_` function that you have chosen as an answer to the first statement. Next, `$b` is the function you have chosen as answer to the second statement. From there, you are no longer free to choose an answer to the statement `statement1 AND statement2`. It is the system that will tell you the answer.
+`$a` is the `_TRUE_` or `_FALSE_` function that you have chosen as an answer to the first statement. Next, `$b` is the function you have chosen as an answer to the second statement. From there, you are no longer free to choose an answer to the statement `statement1 AND statement2`. It is the system that will tell you the answer.
 
 
 The combination `statement1 OR statement2` will have the following answers:
