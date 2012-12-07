@@ -116,10 +116,7 @@ We can indeed refer to the function implementation with a name, but the symbol i
 
 People who see a problem in accepting any non-contradictory statement as the truth, may think that any arbitrary set of statements will end up to be true. This is not the case at all.
 
-
-###4.1. AND
-
-The answer to the truth of a combination of statements, `statement1 AND statement2` is:
+The answer to the truth of the combination of statements `statement1 AND statement2` is:
 
 	statement1      statement2      statement1 and statement2
 
