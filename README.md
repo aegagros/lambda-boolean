@@ -72,7 +72,7 @@ There is only one law in cognition: All statements are true until you can point 
 The second important constraint is that no formal reasoning system is allowed to claim the truth of its own statements:
 
 
-        For any formal effectively generated theory T including basic arithmetical truths
+	For any formal effectively generated theory T including basic arithmetical truths
 	and also certain truths about formal provability, if T includes a statement of
 	its own consistency then T is inconsistent.
 
@@ -104,17 +104,14 @@ It is:
 	function ($a,$b) { return $a;}
 
 
-We can indeed refer to the function implementation with a name, but the symbol is definitely its real nature. It is just a potentially confusing symbol:
-
-
-	_TRUE_
+We can indeed refer to the function implementation with a name, but the symbol is definitely not its real nature. It is just a potentially confusing symbol.
 
 
 
 3. AND, OR, and NOT
 -------------------
 
-People who see a problem in accepting any non-contradictory statement as the truth, may think that any arbitrary set of statements will end up to be true. This is not the case at all.
+People who see a problem in accepting any non-contradictory statement as the truth, may think that any arbitrary set of statements will end up being true. This is not the case at all.
 
 The answer to the truth of the combination of statements `statement1 AND statement2` is:
 
@@ -134,7 +131,7 @@ As soon as you have chosen `_TRUE_` or `_FALSE_` as the answers to a `statement1
 		return $a($b,$a);
 	}
 
-		                                //Expected output
+						//Expected output
 
 	output(_AND_('_TRUE_','_FALSE_'));      //FALSE
 	output(_AND_('_TRUE_','_TRUE_'));       //TRUE
@@ -148,7 +145,7 @@ As soon as you have chosen `_TRUE_` or `_FALSE_` as the answers to a `statement1
 The combination `statement1 OR statement2` will have the following answers:
 
 
-	statement1      statement2      statement1 and statement2
+	statement1      statement2      statement1 or statement2
 
 	_FALSE_        	_FALSE_        	_FALSE_
 	_FALSE_       	_TRUE_          _TRUE_
@@ -166,7 +163,7 @@ It is implemented as following:
 		return $a($a,$b);
 	}
 
-		                                //Expected output
+						//Expected output
 
 	output(_OR_('_TRUE_','_FALSE_'));       //TRUE
 	output(_OR_('_TRUE_','_TRUE_'));        //TRUE
@@ -196,7 +193,7 @@ And now comes the most dangerous function, the `_NOT_` function:
 		//by repeating the full implementation of _FALSE_ and _TRUE in the
 		//function call
 		return $a('_FALSE_','_TRUE_');       
-	};
+	}
 
 						//Expected output
 
@@ -208,22 +205,22 @@ And now comes the most dangerous function, the `_NOT_` function:
 The `_NOT_` function is the basis for all cognition.
 
 
-A set of statements `$a` will collapse as soon as we claim the truth of `$a` while the function `_NOT_($a)` also returns the `_TRUE_` function. This is the dreaded notion of `contradiction`. The notion of `contradiction` is the ONLY but also the absolutely sufficient basis for rejecting a set of statements. Every logical combination of statements must never yield such contradiction.
+A set of statements `$a` will be in `contradiction` as soon as we claim the truth of `$a` while the function `_NOT_($a)` also returns the `_TRUE_` function. The notion of `contradiction` is the ONLY but also the absolutely sufficient basis for rejecting a set of statements. Every logical combination of statements may never yield such contradiction.
 
 
 Some people do not realize how hard it is to keep making statements -- about the gremlins that ate their sandwich -- before hitting a dreaded contradiction. This is why even skillfull liars will avoid lying, if it causes them no damage to tell the truth:
 
 
-        “The most dangerous of all falsehoods is a slightly distorted truth.” 
-        ― Georg Christoph Lichtenberg, The Waste Books
+	The most dangerous of all falsehoods is a slightly distorted truth. 
+	― Georg Christoph Lichtenberg, The Waste Books
 
 
 If a theory, that is, a set of statements, does not collapse in a spectacular contradiction, it is simply not false:
 
 
-        “You can recognize a small truth because its opposite is a falsehood.
+	You can recognize a small truth because its opposite is a falsehood.
 	The opposite of a great truth is another truth.” 
-        ― Niels Bohr
+	― Niels Bohr
 
 
 The following statements are not a contradiction:
