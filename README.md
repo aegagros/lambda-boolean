@@ -63,7 +63,7 @@ The definitions for `TRUE` and `FALSE` in the lambda calculus satisfy two very i
 	the principle of contradiction to be the universal and fully sufficient Principle of all
 	analytical cognition.
 
-        Critique of Pure Reason (German: Kritik der reinen Vernunft) by Immanuel Kant, 1781, Königsberg.
+	Critique of Pure Reason (German: Kritik der reinen Vernunft) by Immanuel Kant, 1781, Königsberg.
 
 
 There is only one law in cognition: All statements are true until you can point out a contradiction in them. So, yes, indeed, if someone says he saw gremlings eating his sandwich, the statement will remain true, until you can finally point out a contradiction in one of his later statements.
@@ -76,7 +76,7 @@ The second important constraint is that no formal reasoning system is allowed to
 	and also certain truths about formal provability, if T includes a statement of
 	its own consistency then T is inconsistent.
 
-        Gödel's Second Incompleteness Theorem
+	Gödel's Second Incompleteness Theorem
 
 
 So, the only acceptable answer to the question "Is New York a city in the USA?" looks like this:
@@ -120,10 +120,10 @@ The answer to the truth of the combination of statements `statement1 AND stateme
 
 	statement1      statement2      statement1 and statement2
 
-	_FALSE_         _FALSE_         _FALSE_
+	_FALSE_       	_FALSE_         _FALSE_
 	_FALSE_         _TRUE_          _FALSE_
-	_TRUE_         _FALSE_          _FALSE_
-	_TRUE_         _TRUE_           _TRUE_
+	_TRUE_         	_FALSE_        	_FALSE_
+	_TRUE_         	_TRUE_         	_TRUE_
 
 As soon as you have chosen `_TRUE_` or `_FALSE_` as the answers to a `statement1` and to another `statement2`, be careful what you start saying about `statement1 _AND_ statement2`. You are no longer free to make arbitrary claims about the combined statement. The lambda calculus is perfectly capable of verifying your combined statement with the following function:
 
@@ -150,10 +150,10 @@ The combination `statement1 OR statement2` will have the following answers:
 
 	statement1      statement2      statement1 and statement2
 
-	_FALSE_         _FALSE_         _FALSE_
-	_FALSE_         _TRUE_          _TRUE_
-	_TRUE_         _FALSE_          _TRUE_
-	_TRUE_         _TRUE_           _TRUE_
+	_FALSE_        	_FALSE_        	_FALSE_
+	_FALSE_       	_TRUE_          _TRUE_
+	_TRUE_         	_FALSE_        	_TRUE_
+	_TRUE_         	_TRUE_         	_TRUE_
 
 
 It is implemented as following:
