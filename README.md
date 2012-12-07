@@ -238,7 +238,7 @@ These statements are not a contradiction but an ambiguity. It is not possible to
 	echo $x
 	--> function ($a,$b) { return $a;} //TRUE
 	echo _NOT_($x)
-	--> function ($a,$b) { return $a;} //FALSE
+	--> function ($a,$b) { return $a;} //ALSO TRUE
 
 
 If the answer to `$x` is `function ($a,$b) { return $a;}`, the answer to `_NOT_($x)` must be `function ($a,$b) { return $b;}`. Any other way to detect a contradiction is incorrect.
