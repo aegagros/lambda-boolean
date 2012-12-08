@@ -241,7 +241,7 @@ These statements are not a contradiction but an ambiguity. It is not possible to
 
 If the answer to `$x` is `function ($a,$b) { return $a;}`, the answer to `_NOT_($x)` must be `function ($a,$b) { return $b;}`. Any other way to detect a contradiction is incorrect.
 
-Ambiguities may look like contradictions, but they are not. Bohr's remark simply rephrases an inevitable consequence of the Church-Turing thesis concerning the [Entscheidungsproblem](http://en.wikipedia.org/wiki/Entscheidungsproblem). 
+Ambiguities may look like contradictions, but they are not. Bohr's remark simply rephrases an inevitable consequence of the Church-Turing theorem concerning the [Entscheidungsproblem](http://en.wikipedia.org/wiki/Entscheidungsproblem). 
 
 
 4. Conclusion
