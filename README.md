@@ -188,7 +188,7 @@ And now comes the most dangerous function, the `_NOT_` function:
 	function _NOT_($a)
 	{
 		//we could also implement this in full anonymous lambda style
-		//by repeating the full implementation of _FALSE_ and _TRUE in the
+		//by repeating the full implementation of _FALSE_ and _TRUE_ in the
 		//function call
 		return $a('_FALSE_','_TRUE_');       
 	}
