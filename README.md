@@ -50,7 +50,7 @@ The lambda calculus works differently. It adamantly insists on the idea that `TR
 	}
 
 
-For example, the answer to the question `_TRUE_('john', 'peter')` is `john`. Now you are probably thinking "You cannot mean this. This is absurd!" I must insist, however, that the answer to the truth of the question about `John` and `Peter` is `John`, simply because you mentioned `John` first. If you supply two alternatives in your question, the first alternative is always the true answer and the second alternative the false one. So, indeed, you decide entirely by yourself what is the truth. Just mention what you prefer, first.
+For example, the answer to the question `_TRUE_('john', 'peter')` is `john`. Now you are probably thinking "You cannot mean this. This is absurd!" I must insist, however, that the answer to the truth of the question about `john` and `peter` is `john`, simply because you mentioned `john` first. If you supply two alternatives in your question, the first alternative is always the true answer and the second alternative the false one. So, indeed, you decide entirely by yourself what is the truth. Just mention what you prefer, first.
 
 You may think that the idea of determining truth and falsehood arbitrarily by essentially leaving the answer to the person asking the question is a problem. It is absolutely not. On the contrary, this is the only correct way to determine the truth.
 
