@@ -217,7 +217,7 @@ If a theory, that is, a set of statements, does not collapse in a spectacular co
 
 
 	You can recognize a small truth because its opposite is a falsehood.
-	The opposite of a great truth is another truth.” 
+	The opposite of a great truth is another truth. 
 	― Niels Bohr
 
 
